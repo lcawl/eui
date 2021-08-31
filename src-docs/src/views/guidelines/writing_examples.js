@@ -16,6 +16,7 @@ import {
   EuiHorizontalRule,
   EuiIconTip,
   EuiLink,
+  EuiModal,
   EuiModalBody,
   EuiModalFooter,
   EuiModalHeader,
@@ -309,25 +310,26 @@ const WritingExamples = () => {
           <EuiPanel
             paddingSize="none"
             style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-            <EuiModalHeader>
-              <EuiModalHeaderTitle>
-                You have unsaved changes
-              </EuiModalHeaderTitle>
-            </EuiModalHeader>
-            <EuiModalBody>
-              <EuiText>
-                <p>
-                  You can keep or discard your changes on return to view mode.
-                  You can&apos;t recover discarded changes.
-                </p>
-              </EuiText>
-            </EuiModalBody>
-
-            <EuiModalFooter>
-              <EuiButtonEmpty>Continue editing</EuiButtonEmpty>
-              <EuiButtonEmpty>Discard changes</EuiButtonEmpty>
-              <EuiButton fill>Keep changes </EuiButton>
-            </EuiModalFooter>
+            <EuiModal>
+              <EuiModalHeader>
+                <EuiModalHeaderTitle>
+                  You have unsaved changes
+                </EuiModalHeaderTitle>
+              </EuiModalHeader>
+              <EuiModalBody>
+                <EuiText>
+                  <p>
+                    You can keep or discard your changes on return to view mode.
+                    You can&apos;t recover discarded changes.
+                  </p>
+                </EuiText>
+              </EuiModalBody>
+              <EuiModalFooter>
+                <EuiButtonEmpty>Continue editing</EuiButtonEmpty>
+                <EuiButtonEmpty>Discard changes</EuiButtonEmpty>
+                <EuiButton fill>Keep changes </EuiButton>
+              </EuiModalFooter>
+            </EuiModal>
           </EuiPanel>
         </GuideRuleExample>
       </GuideRule>
